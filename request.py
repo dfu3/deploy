@@ -1,14 +1,17 @@
-import os
+import os 
 import sys
 
-vers = 'v7'
-tier = 'qa'
-mach = 'back'
+print '--------------------'
+vers = raw_input("|version: ")
+tier = raw_input("|tier: ")
+mach = raw_input("|machine: ")
+print '--------------------'
 
-if(len(sys.argv) == 2):
-	tier = sys.argv[1]
-elif(len(sys.argv) == 3):
-	tier = sys.argv[1]
-	vers = sys.argv[2]
+# if(len(sys.argv) == 2):
+# 	tier = sys.argv[1]
+# elif(len(sys.argv) == 3):
+# 	tier = sys.argv[1]
+# 	vers = sys.argv[2]
 
-os.system('curl  http://10.200.172.51:5000/request/' + tier + '/' + mach + '/' + vers)
+print mach + ':' + tier + ':' + vers
+#os.system('curl  http://10.200.172.28:5000/request/' + tier + '/' + mach + '/' + vers)
